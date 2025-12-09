@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><title>Подтвердите удаление</title></head>
+<body>
+  <h2>Удалить: {{ food.name }} ({{ food.calories }} kcal)</h2>
+  <form method="post">{% csrf_token %}<button type="submit">Подтвердить</button></form>
+  <a href="{% url 'food:list' %}">Отмена</a>
+</body>
+</html>
